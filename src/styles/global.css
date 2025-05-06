@@ -69,6 +69,14 @@ img {
   flex: 1;
 }
 
+.star {
+  color: #d4d4d4;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
 .book-cover img {
   max-width: 200px;
   border-radius: 4px;
