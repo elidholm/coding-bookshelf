@@ -15,7 +15,6 @@ export interface Props {
 }
 
 const { frontmatter } = Astro.props;
-const feather = await import('feather-icons');
 ---
 
 <MainLayout title={frontmatter.title} description={`Book review of ${frontmatter.title} by ${frontmatter.author}`}>
