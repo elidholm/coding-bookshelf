@@ -51,6 +51,7 @@ To add a new book review:
    publishDate: "YYYY-MM-DD"
    tags: ["tag1", "tag2", "tag3"]
    coverImage: "/path/to/cover/image.jpg"  # Optional
+   link: "https://link-to-book.com"  # Optional
    rating: 5  # 1-5 rating
    summary: "A brief summary of the book"
    ---
