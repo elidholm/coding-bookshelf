@@ -1,0 +1,67 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import BookCard from '../components/BookCard.astro';
+
+// Get all markdown files in the books directory
+const books = await Astro.glob('./books/*.md');
+
+// Sort books by publish date (newest first)
+const sortedBooks = books.sort((a, b) => {
+  return new Date(b.frontmatter.publishDate).getTime() - new Date(a.frontmatter.publishDate).getTime();
+});
+---
+
+<MainLayout title="Home">
+  <section class="hero">
+    <div class="container">
+      <h1>Coding Bookshelf</h1>
+      <p class="subtitle">My personal notes and reviews on programming, DevOps, and tech books</p>
+    </div>
+  </section>
+
+  <section class="featured-books">
+    <div class="container">
+      <h2 class="section-title">Recent Book Reviews</h2>
+
+      <div class="book-grid">
+        {sortedBooks.map((book) => (
+          <BookCard
+            title={book.frontmatter.title}
+            author={book.frontmatter.author}
+            slug={book.url.split('/').pop().replace(/\.md$/, '')}
+            coverImage={book.frontmatter.coverImage}
+            tags={book.frontmatter.tags}
+            rating={book.frontmatter.rating}
+            summary={book.frontmatter.summary}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .hero {
+    background-color: #2a2a2a;
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    opacity: 0.8;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .featured-books {
+    margin-bottom: 4rem;
+  }
+</style>

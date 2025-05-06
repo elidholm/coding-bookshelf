@@ -1,0 +1,115 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="About">
+  <div class="about-container">
+    <h1>About This Project</h1>
+
+    <section class="about-section">
+      <h2>Why I Created This Site</h2>
+      <p>
+        As a professional in software development, DevOps, and machine learning, I'm constantly reading to stay
+        updated with the latest technologies and best practices. This site serves as my digital reading journal,
+        where I document insights, key takeaways, and personal reflections on the technical books I read.
+      </p>
+      <p>
+        By sharing these notes publicly, I hope to:
+      </p>
+      <ul>
+        <li>Create a personal reference for concepts I might need to revisit</li>
+        <li>Help others decide which books might be worth their time</li>
+        <li>Contribute to knowledge sharing in the tech community</li>
+        <li>Improve my own understanding through the process of summarizing and explaining</li>
+      </ul>
+    </section>
+
+    <section class="about-section">
+      <h2>How I Structure My Notes</h2>
+      <p>
+        For each book, I typically include:
+      </p>
+      <ul>
+        <li>A brief summary of the book's main ideas</li>
+        <li>Key concepts and takeaways</li>
+        <li>Code examples when applicable</li>
+        <li>My personal rating and recommendation</li>
+        <li>How I've applied (or plan to apply) the knowledge in my work</li>
+      </ul>
+      <p>
+        These are personal notes rather than comprehensive summaries or reviews. They reflect what I found
+        most valuable or interesting, which might differ from what others take away from the same material.
+      </p>
+    </section>
+
+    <section class="about-section">
+      <h2>About Me</h2>
+      <p>
+        I'm a software developer with a passion for creating efficient, scalable systems. My areas of interest include:
+      </p>
+      <ul>
+        <li>Software architecture and design patterns</li>
+        <li>DevOps practices and cloud infrastructure</li>
+        <li>Machine learning and data engineering</li>
+        <li>Programming languages and paradigms</li>
+      </ul>
+      <p>
+        I believe in continuous learning and the power of sharing knowledge. This site is one way I contribute
+        to the broader tech community while organizing my own thoughts and learnings.
+      </p>
+    </section>
+
+    <section class="about-section">
+      <h2>Contact</h2>
+      <p>
+        Have suggestions for books I should read next? Found an error in my notes? Just want to discuss
+        a book we've both read? Feel free to reach out:
+      </p>
+      <p>
+        <a href="https://github.com/elidholm/coding-bookshelf" target="_blank" rel="noopener noreferrer">
+          GitHub Repository
+        </a>
+      </p>
+    </section>
+  </div>
+</MainLayout>
+
+<style>
+  .about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .about-section {
+    margin-bottom: 3rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #0077cc;
+  }
+
+  ul {
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    font-weight: 500;
+  }
+</style>

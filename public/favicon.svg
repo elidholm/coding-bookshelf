@@ -1,0 +1,17 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .book {
+      fill: #0077cc;
+    }
+    @media (prefers-color-scheme: dark) {
+      .book {
+        fill: #64b5f6;
+      }
+    }
+  </style>
+  <rect x="20" y="15" width="60" height="70" rx="5" ry="5" class="book" />
+  <rect x="30" y="25" width="40" height="5" rx="2" ry="2" fill="white" />
+  <rect x="30" y="35" width="40" height="5" rx="2" ry="2" fill="white" />
+  <rect x="30" y="45" width="40" height="5" rx="2" ry="2" fill="white" />
+  <rect x="30" y="55" width="25" height="5" rx="2" ry="2" fill="white" />
+</svg>
