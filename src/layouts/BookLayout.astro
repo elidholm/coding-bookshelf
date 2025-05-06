@@ -8,12 +8,14 @@ export interface Props {
     publishDate: string;
     tags: string[];
     coverImage?: string;
+    link?: string;
     rating?: number;
     summary?: string;
   };
 }
 
 const { frontmatter } = Astro.props;
+const feather = await import('feather-icons');
 ---
 
 <MainLayout title={frontmatter.title} description={`Book review of ${frontmatter.title} by ${frontmatter.author}`}>
@@ -29,6 +31,14 @@ const { frontmatter } = Astro.props;
               {Array(5).fill('').map((_, i) => (
                 <span class={i < frontmatter.rating ? 'star filled' : 'star'}>★</span>
               ))}
+            </div>
+          )}
+
+          {frontmatter.link && (
+            <div class="link">
+              <a href={frontmatter.link} target="_blank" rel="noopener noreferrer">
+                  Buy Book <i class="fa fa-external-link"></i>
+              </a>
             </div>
           )}
 
