@@ -4,7 +4,12 @@ import MainLayout from '../layouts/MainLayout.astro';
 
 <MainLayout title="About">
   <div class="about-container">
-    <h1>About This Project</h1>
+    <div class="profile-section">
+      <div class="profile-image-container">
+          <img src="/coding-bookshelf/profile.jpg" alt="Profile Photo" class="profile-image" />
+      </div>
+      <h1>About This Project</h1>
+    </div>
 
     <section class="about-section">
       <h2>Why I Created This Site</h2>
@@ -84,6 +89,26 @@ import MainLayout from '../layouts/MainLayout.astro';
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
+  .profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 2rem;
+  }
+
+  .profile-image-container {
+    flex-shrink: 0;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #0077cc;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  }
+
   .about-section {
     margin-bottom: 3rem;
   }
@@ -111,5 +136,17 @@ import MainLayout from '../layouts/MainLayout.astro';
 
   a {
     font-weight: 500;
+  }
+
+  @media (max-width: 600px) {
+    .profile-section {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+
+    h1 {
+      margin-top: 1rem;
+    }
   }
 </style>
