@@ -35,7 +35,7 @@ To run this project locally:
    npm run dev
    ```
 
-4. Open your browser at `http://localhost:4321`
+4. Open your browser at `http://localhost:4321/coding-bookshelf`
 
 ## Adding New Book Notes
 
