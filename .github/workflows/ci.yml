@@ -19,3 +19,13 @@ jobs:
           yamllint_config_filepath: ./.yamllint
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  actionlint:
+    name: GitHub Actions Linting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Run actionlint
+        uses: raven-actions/actionlint@v2
